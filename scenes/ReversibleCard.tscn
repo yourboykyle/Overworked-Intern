@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ms6j827p8ja2"]
+
+[ext_resource type="Script" uid="uid://ck7s65w8mvcfb" path="res://scenes/reversible_card.gd" id="1_kj3qr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kj3qr"]
+
+[node name="ReversibleCard" type="Node2D" unique_id=785310779]
+scale = Vector2(0.13, 0.13)
+script = ExtResource("1_kj3qr")
+
+[node name="Front" type="Sprite2D" parent="." unique_id=457573674]
+
+[node name="Back" type="Sprite2D" parent="." unique_id=1492776264]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1589810536]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2107296551]
+scale = Vector2(51.2, 51.2)
+shape = SubResource("RectangleShape2D_kj3qr")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

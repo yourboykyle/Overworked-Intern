@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b1osttivh25l5"]
+
+[ext_resource type="Texture2D" uid="uid://7ieceqvom3yl" path="res://scenes/background_image.png" id="1_1bquu"]
+[ext_resource type="PackedScene" uid="uid://ms6j827p8ja2" path="res://scenes/ReversibleCard.tscn" id="2_gs67c"]
+[ext_resource type="Resource" uid="uid://dqkkyu2u3nu5l" path="res://card_types/Wheelchair.tres" id="3_vy38c"]
+
+[node name="Hospital_Root_Node" type="Node2D" unique_id=942970590]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1334144763]
+position = Vector2(904.5, 460.5)
+texture = ExtResource("1_1bquu")
+
+[node name="ReversibleCard" parent="." unique_id=785310779 instance=ExtResource("2_gs67c")]
+position = Vector2(1650, 464)
+card_data = ExtResource("3_vy38c")
