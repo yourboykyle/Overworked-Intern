@@ -3,6 +3,7 @@ extends Node2D
 
 @export var card_data: CardData
 @export var is_face_up := true
+@export var in_deck := true
 
 @onready var front = $Front
 @onready var back = $Back
