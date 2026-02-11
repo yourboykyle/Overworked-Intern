@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcxf5ymoj20y7"
-path="res://.godot/imported/9.png-5e9642439f09dc4ac55dcca2a26e5119.ctex"
+uid="uid://dg7iwxxir37eu"
+path="res://.godot/imported/Medical_Ventilator.png-95fd5cd49049b509d6c6a844517ca41a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://card_images/9.png"
-dest_files=["res://.godot/imported/9.png-5e9642439f09dc4ac55dcca2a26e5119.ctex"]
+source_file="res://card_images/Medical_Ventilator.png"
+dest_files=["res://.godot/imported/Medical_Ventilator.png-95fd5cd49049b509d6c6a844517ca41a.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5t6rri7isi1a"
-path="res://.godot/imported/card_reverse_side.png-26476820c89b51e873dd997cb782ffc8.ctex"
+uid="uid://cv2m6tb8ktnub"
+path="res://.godot/imported/Pulse_Oximeter.png-8cfb1ed3030ef37460976b52eb282f65.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://card_images/card_reverse_side.png"
-dest_files=["res://.godot/imported/card_reverse_side.png-26476820c89b51e873dd997cb782ffc8.ctex"]
+source_file="res://card_images/Pulse_Oximeter.png"
+dest_files=["res://.godot/imported/Pulse_Oximeter.png-8cfb1ed3030ef37460976b52eb282f65.ctex"]
 
 [params]
 

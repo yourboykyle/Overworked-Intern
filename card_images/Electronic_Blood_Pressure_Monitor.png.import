@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dw6nls5fg7ii1"
-path="res://.godot/imported/13.png-d5446db5fb48a70c8021b63d773cb410.ctex"
+uid="uid://fgey7wl2yqim"
+path="res://.godot/imported/Electronic_Blood_Pressure_Monitor.png-2505c7a0463c8c730e7b8e34acbd3c70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://card_images/13.png"
-dest_files=["res://.godot/imported/13.png-d5446db5fb48a70c8021b63d773cb410.ctex"]
+source_file="res://card_images/Electronic_Blood_Pressure_Monitor.png"
+dest_files=["res://.godot/imported/Electronic_Blood_Pressure_Monitor.png-2505c7a0463c8c730e7b8e34acbd3c70.ctex"]
 
 [params]
 

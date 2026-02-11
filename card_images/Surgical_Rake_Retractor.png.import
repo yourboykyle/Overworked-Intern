@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c11rgj315geao"
-path="res://.godot/imported/3.png-2aa7ff6db76f0f0f87e966f6ab3f71e3.ctex"
+uid="uid://d4h17qypicn5v"
+path="res://.godot/imported/Surgical_Rake_Retractor.png-be26944b85c6f90f1a525acc86e2931c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://card_images/3.png"
-dest_files=["res://.godot/imported/3.png-2aa7ff6db76f0f0f87e966f6ab3f71e3.ctex"]
+source_file="res://card_images/Surgical_Rake_Retractor.png"
+dest_files=["res://.godot/imported/Surgical_Rake_Retractor.png-be26944b85c6f90f1a525acc86e2931c.ctex"]
 
 [params]
 

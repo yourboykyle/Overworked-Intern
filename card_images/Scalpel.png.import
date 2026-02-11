@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxo01ehd2mu7m"
-path="res://.godot/imported/2.png-68c3d13a89bd33cf29fd214fc82309d7.ctex"
+uid="uid://bcxf5ymoj20y7"
+path="res://.godot/imported/Scalpel.png-7ae7d4d15703c92abb15ece2850609cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://card_images/2.png"
-dest_files=["res://.godot/imported/2.png-68c3d13a89bd33cf29fd214fc82309d7.ctex"]
+source_file="res://card_images/Scalpel.png"
+dest_files=["res://.godot/imported/Scalpel.png-7ae7d4d15703c92abb15ece2850609cd.ctex"]
 
 [params]
 

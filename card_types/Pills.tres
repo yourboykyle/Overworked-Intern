@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bx17xcrlsl00n"]
+
+[ext_resource type="Texture2D" uid="uid://5t6rri7isi1a" path="res://card_images/Reverse_Side.png" id="1_3p3x7"]
+[ext_resource type="Texture2D" uid="uid://pbph7p3nsm6r" path="res://card_images/Pills.png" id="2_3p3x7"]
+[ext_resource type="Script" uid="uid://c3cfk6nc7vnpj" path="res://card_types/card_data.gd" id="3_susi4"]
+
+[resource]
+script = ExtResource("3_susi4")
+card_name = "Pills"
+front_texture = ExtResource("2_3p3x7")
+back_texture = ExtResource("1_3p3x7")
+metadata/_custom_type_script = "uid://c3cfk6nc7vnpj"

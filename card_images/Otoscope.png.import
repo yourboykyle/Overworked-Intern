@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fgey7wl2yqim"
-path="res://.godot/imported/4.png-e0ffa2bfe8b98e1f2c3f92405642a8f7.ctex"
+uid="uid://bl7hv0icifn6i"
+path="res://.godot/imported/Otoscope.png-fc4c7f633c1ae542d3e59841ae416507.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://card_images/4.png"
-dest_files=["res://.godot/imported/4.png-e0ffa2bfe8b98e1f2c3f92405642a8f7.ctex"]
+source_file="res://card_images/Otoscope.png"
+dest_files=["res://.godot/imported/Otoscope.png-fc4c7f633c1ae542d3e59841ae416507.ctex"]
 
 [params]
 
