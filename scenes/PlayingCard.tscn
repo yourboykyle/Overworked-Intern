@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ms6j827p8ja2"]
 
-[ext_resource type="Script" uid="uid://ck7s65w8mvcfb" path="res://scenes/reversible_card.gd" id="1_kj3qr"]
+[ext_resource type="Script" uid="uid://ck7s65w8mvcfb" path="res://scripts/playing_card.gd" id="1_kj3qr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kj3qr"]
 

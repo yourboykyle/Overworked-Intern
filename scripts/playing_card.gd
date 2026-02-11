@@ -4,11 +4,14 @@ extends Node2D
 @export var card_data: CardData
 @export var is_face_up := true
 @export var in_deck := true
+@export var is_reversible := true
 
 @onready var front = $Front
 @onready var back = $Back
 
 func _ready():
+	if in_deck:
+		add_to_group("deck_cards")
 	apply_card_data()
 	update_visual()
 
@@ -18,7 +21,16 @@ func apply_card_data():
 		back.texture = card_data.back_texture
 
 func flip():
-	is_face_up = !is_face_up
+	if is_reversible:
+		is_face_up = !is_face_up
+		update_visual()
+
+func set_face_up():
+	is_face_up = true
+	update_visual()
+
+func set_face_down():
+	is_face_up = false
 	update_visual()
 
 func update_visual():

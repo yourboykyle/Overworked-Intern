@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://5t6rri7isi1a" path="res://card_images/Reverse_Side.png" id="1_efp7b"]
 [ext_resource type="Texture2D" uid="uid://d4h17qypicn5v" path="res://card_images/Surgical_Rake_Retractor.png" id="2_efp7b"]
-[ext_resource type="Script" uid="uid://c3cfk6nc7vnpj" path="res://card_types/card_data.gd" id="3_qjgyo"]
+[ext_resource type="Script" uid="uid://c3cfk6nc7vnpj" path="res://scripts/playing_card_data.gd" id="3_qjgyo"]
 
 [resource]
 script = ExtResource("3_qjgyo")
