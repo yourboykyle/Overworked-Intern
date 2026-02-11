@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b1osttivh25l5"]
 
 [ext_resource type="Texture2D" uid="uid://7ieceqvom3yl" path="res://scenes/background_image.png" id="1_1bquu"]
-[ext_resource type="Script" uid="uid://c7g3ufiqsp2uf" path="res://scripts/main.gd" id="1_1spy1"]
+[ext_resource type="Script" uid="uid://c7g3ufiqsp2uf" path="res://scenes/main.gd" id="1_1spy1"]
 [ext_resource type="Script" uid="uid://c3cfk6nc7vnpj" path="res://scripts/playing_card_data.gd" id="2_efo7q"]
 [ext_resource type="PackedScene" uid="uid://ms6j827p8ja2" path="res://scenes/PlayingCard.tscn" id="2_gs67c"]
 [ext_resource type="Resource" uid="uid://dqkkyu2u3nu5l" path="res://card_types/Wheelchair.tres" id="3_vy38c"]
