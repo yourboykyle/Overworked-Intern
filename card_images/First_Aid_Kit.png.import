@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dj78oet8mdhek"
-path="res://.godot/imported/14.png-504450fd38dde6aadfb7b9ff791263df.ctex"
+uid="uid://bdobxy88wkyuy"
+path="res://.godot/imported/First_Aid_Kit.png-d5c84cc6b220558b73555ba7753f8ac7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://card_images/14.png"
-dest_files=["res://.godot/imported/14.png-504450fd38dde6aadfb7b9ff791263df.ctex"]
+source_file="res://card_images/First_Aid_Kit.png"
+dest_files=["res://.godot/imported/First_Aid_Kit.png-d5c84cc6b220558b73555ba7753f8ac7.ctex"]
 
 [params]
 

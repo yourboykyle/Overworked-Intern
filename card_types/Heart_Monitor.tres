@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dw2q0ehr2t20l"]
+
+[ext_resource type="Texture2D" uid="uid://5t6rri7isi1a" path="res://card_images/Reverse_Side.png" id="1_sq04k"]
+[ext_resource type="Texture2D" uid="uid://cnhycn86qbspv" path="res://card_images/Heart_Monitor.png" id="2_sq04k"]
+[ext_resource type="Script" uid="uid://c3cfk6nc7vnpj" path="res://card_types/card_data.gd" id="3_m0rey"]
+
+[resource]
+script = ExtResource("3_m0rey")
+card_name = "Heart_Monitor"
+front_texture = ExtResource("2_sq04k")
+back_texture = ExtResource("1_sq04k")
+metadata/_custom_type_script = "uid://c3cfk6nc7vnpj"

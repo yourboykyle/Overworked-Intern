@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pbph7p3nsm6r"
-path="res://.godot/imported/5.png-36444cdf604b457450ab2ce27a8b0875.ctex"
+uid="uid://qap36qnhbnam"
+path="res://.godot/imported/Parenteral_Nutrition_Bags.png-ea5be209a2ce15d8c05dc16d57786eed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://card_images/5.png"
-dest_files=["res://.godot/imported/5.png-36444cdf604b457450ab2ce27a8b0875.ctex"]
+source_file="res://card_images/Parenteral_Nutrition_Bags.png"
+dest_files=["res://.godot/imported/Parenteral_Nutrition_Bags.png-ea5be209a2ce15d8c05dc16d57786eed.ctex"]
 
 [params]
 

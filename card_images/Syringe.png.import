@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qap36qnhbnam"
-path="res://.godot/imported/8.png-9d5c9bbd22ae3c540f44242c084f459f.ctex"
+uid="uid://c11rgj315geao"
+path="res://.godot/imported/Syringe.png-5dab39cd3119f336e8891e07e9206992.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://card_images/8.png"
-dest_files=["res://.godot/imported/8.png-9d5c9bbd22ae3c540f44242c084f459f.ctex"]
+source_file="res://card_images/Syringe.png"
+dest_files=["res://.godot/imported/Syringe.png-5dab39cd3119f336e8891e07e9206992.ctex"]
 
 [params]
 

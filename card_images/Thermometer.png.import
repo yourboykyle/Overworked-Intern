@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnhycn86qbspv"
-path="res://.godot/imported/11.png-15abe4773609d7412e25c065ceb42521.ctex"
+uid="uid://dxo01ehd2mu7m"
+path="res://.godot/imported/Thermometer.png-810f0d510b02744f92d313b6c889b51f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://card_images/11.png"
-dest_files=["res://.godot/imported/11.png-15abe4773609d7412e25c065ceb42521.ctex"]
+source_file="res://card_images/Thermometer.png"
+dest_files=["res://.godot/imported/Thermometer.png-810f0d510b02744f92d313b6c889b51f.ctex"]
 
 [params]
 

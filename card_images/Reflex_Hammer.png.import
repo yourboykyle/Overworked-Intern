@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ma53xfnwafoj"
-path="res://.godot/imported/1.png-638e1f53901eddc570dba0656e7d4700.ctex"
+uid="uid://dj78oet8mdhek"
+path="res://.godot/imported/Reflex_Hammer.png-914db7b8438982aed46f3b863b484b76.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://card_images/1.png"
-dest_files=["res://.godot/imported/1.png-638e1f53901eddc570dba0656e7d4700.ctex"]
+source_file="res://card_images/Reflex_Hammer.png"
+dest_files=["res://.godot/imported/Reflex_Hammer.png-914db7b8438982aed46f3b863b484b76.ctex"]
 
 [params]
 
