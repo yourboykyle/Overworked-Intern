@@ -19,9 +19,7 @@
 [ext_resource type="Resource" uid="uid://bi0nla7u2njh3" path="res://card_types/Syringe.tres" id="17_m1oc7"]
 [ext_resource type="Resource" uid="uid://ceeppnfig4so0" path="res://card_types/Thermometer.tres" id="18_kbe8o"]
 [ext_resource type="Resource" uid="uid://dqkkyu2u3nu5l" path="res://card_types/Wheelchair.tres" id="19_7f8l2"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cxum0"]
-load_path = "res://.godot/imported/background_image.png-70d3ada7d49fedb5b622b46a5065e70b.ctex"
+[ext_resource type="PackedScene" uid="uid://clgan6pwr4i3h" path="res://scenes/Board.tscn" id="20_sv1m6"]
 
 [node name="Main" type="Node2D" unique_id=942970590]
 script = ExtResource("1_45i86")
@@ -29,10 +27,6 @@ card_scene = ExtResource("2_sv1m6")
 all_card_data = Array[ExtResource("3_a8wo8")]([ExtResource("4_attvq"), ExtResource("4_attvq"), ExtResource("5_bneo8"), ExtResource("5_bneo8"), ExtResource("6_ocgqw"), ExtResource("6_ocgqw"), ExtResource("7_jbgew"), ExtResource("7_jbgew"), ExtResource("8_a85ww"), ExtResource("8_a85ww"), ExtResource("9_jhsr3"), ExtResource("9_jhsr3"), ExtResource("10_0bq3a"), ExtResource("10_0bq3a"), ExtResource("11_754j2"), ExtResource("11_754j2"), ExtResource("12_i4jil"), ExtResource("12_i4jil"), ExtResource("13_jai3c"), ExtResource("13_jai3c"), ExtResource("14_1gdd5"), ExtResource("14_1gdd5"), ExtResource("15_426vi"), ExtResource("15_426vi"), ExtResource("16_naigu"), ExtResource("16_naigu"), ExtResource("17_m1oc7"), ExtResource("17_m1oc7"), ExtResource("18_kbe8o"), ExtResource("18_kbe8o"), ExtResource("19_7f8l2"), ExtResource("19_7f8l2")])
 
 [node name="UIElements" type="Node2D" parent="." unique_id=102820595]
-
-[node name="Background" type="Sprite2D" parent="UIElements" unique_id=1334144763]
-position = Vector2(1495.5, 460.5)
-texture = SubResource("CompressedTexture2D_cxum0")
 
 [node name="DiscardPileLabel" type="Label" parent="UIElements" unique_id=1794295216]
 offset_left = 346.0
@@ -55,82 +49,12 @@ text = "Start Game"
 [node name="GridContainer" type="Node2D" parent="." unique_id=705967233]
 position = Vector2(658, 1011)
 
+[node name="Board" parent="." unique_id=443230231 instance=ExtResource("20_sv1m6")]
+position = Vector2(598, 0)
+scale = Vector2(1.5, 1.5)
+
 [node name="DrawPile" type="Node2D" parent="." unique_id=1597279471]
 position = Vector2(448, 1011)
-
-[node name="RoomCards" type="Node2D" parent="." unique_id=2093494702]
-
-[node name="Wheelchair" parent="RoomCards" unique_id=785310779 instance=ExtResource("2_sv1m6")]
-position = Vector2(2134, 213)
-card_data = ExtResource("19_7f8l2")
-in_deck = false
-is_reversible = false
-
-[node name="Parenteral_Nutrition_Bags" parent="RoomCards" unique_id=2033915439 instance=ExtResource("2_sv1m6")]
-position = Vector2(2240, 791)
-card_data = ExtResource("10_0bq3a")
-in_deck = false
-is_reversible = false
-
-[node name="Pills" parent="RoomCards" unique_id=646385248 instance=ExtResource("2_sv1m6")]
-position = Vector2(2246, 477)
-card_data = ExtResource("11_754j2")
-in_deck = false
-is_reversible = false
-
-[node name="First_Aid_Kit" parent="RoomCards" unique_id=720859274 instance=ExtResource("2_sv1m6")]
-position = Vector2(1445, 271)
-card_data = ExtResource("6_ocgqw")
-in_deck = false
-is_reversible = false
-
-[node name="Pulse_Oximeter" parent="RoomCards" unique_id=142648693 instance=ExtResource("2_sv1m6")]
-position = Vector2(986, 785)
-card_data = ExtResource("12_i4jil")
-in_deck = false
-is_reversible = false
-
-[node name="Syringe" parent="RoomCards" unique_id=1095770929 instance=ExtResource("2_sv1m6")]
-position = Vector2(1784.9999, 274)
-card_data = ExtResource("17_m1oc7")
-in_deck = false
-is_reversible = false
-
-[node name="Thermometer" parent="RoomCards" unique_id=1802924047 instance=ExtResource("2_sv1m6")]
-position = Vector2(936, 276)
-card_data = ExtResource("18_kbe8o")
-in_deck = false
-is_reversible = false
-
-[node name="Heart_Monitor" parent="RoomCards" unique_id=1317955863 instance=ExtResource("2_sv1m6")]
-position = Vector2(1389, 775)
-card_data = ExtResource("7_jbgew")
-in_deck = false
-is_reversible = false
-
-[node name="Stethoscope" parent="RoomCards" unique_id=238534739 instance=ExtResource("2_sv1m6")]
-position = Vector2(756, 718)
-card_data = ExtResource("15_426vi")
-in_deck = false
-is_reversible = false
-
-[node name="Analog_Blood_Pressure_Monitor" parent="RoomCards" unique_id=1176211499 instance=ExtResource("2_sv1m6")]
-position = Vector2(1586, 777)
-card_data = ExtResource("4_attvq")
-in_deck = false
-is_reversible = false
-
-[node name="Scalpel" parent="RoomCards" unique_id=1033975257 instance=ExtResource("2_sv1m6")]
-position = Vector2(1851, 762)
-card_data = ExtResource("14_1gdd5")
-in_deck = false
-is_reversible = false
-
-[node name="Medical_Ventilator" parent="RoomCards" unique_id=710549534 instance=ExtResource("2_sv1m6")]
-position = Vector2(1187, 777)
-card_data = ExtResource("8_a85ww")
-in_deck = false
-is_reversible = false
 
 [node name="DeckCards" type="Node2D" parent="." unique_id=1514930145]
 visible = false

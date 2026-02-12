@@ -2,6 +2,19 @@
 
 [ext_resource type="Texture2D" uid="uid://dfr6mie3838o0" path="res://assets/COMP1501_A4_Map_v6.png" id="1_qails"]
 [ext_resource type="PackedScene" uid="uid://dj4ilwh0cqxrg" path="res://scenes/Player.tscn" id="2_hs2ul"]
+[ext_resource type="PackedScene" uid="uid://ms6j827p8ja2" path="res://scenes/PlayingCard.tscn" id="3_qtc5n"]
+[ext_resource type="Resource" uid="uid://dqkkyu2u3nu5l" path="res://card_types/Wheelchair.tres" id="4_23q4v"]
+[ext_resource type="Resource" uid="uid://dmo8f5xnl40dj" path="res://card_types/Parenteral_Nutrition_Bags.tres" id="5_s421v"]
+[ext_resource type="Resource" uid="uid://bx17xcrlsl00n" path="res://card_types/Pills.tres" id="6_aqpwq"]
+[ext_resource type="Resource" uid="uid://dcqfw8ivlnq81" path="res://card_types/First_Aid_Kit.tres" id="7_y61op"]
+[ext_resource type="Resource" uid="uid://jldbvkhx0x1k" path="res://card_types/Pulse_Oximeter.tres" id="8_q282n"]
+[ext_resource type="Resource" uid="uid://bi0nla7u2njh3" path="res://card_types/Syringe.tres" id="9_lmdjc"]
+[ext_resource type="Resource" uid="uid://ceeppnfig4so0" path="res://card_types/Thermometer.tres" id="10_a2iow"]
+[ext_resource type="Resource" uid="uid://dw2q0ehr2t20l" path="res://card_types/Heart_Monitor.tres" id="11_ql2b8"]
+[ext_resource type="Resource" uid="uid://cirqwdykqopga" path="res://card_types/Stethoscope.tres" id="12_ff61y"]
+[ext_resource type="Resource" uid="uid://bknm0e2p6j3tt" path="res://card_types/Analog_Blood_Pressure_Monitor.tres" id="13_ip5rr"]
+[ext_resource type="Resource" uid="uid://b6g6n6pv323lm" path="res://card_types/Scalpel.tres" id="14_e855l"]
+[ext_resource type="Resource" uid="uid://ba5tmurhrdc8d" path="res://card_types/Medical_Ventilator.tres" id="15_jrcev"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_hs2ul"]
 a = Vector2(-601, 0)
@@ -268,7 +281,82 @@ position = Vector2(1061.8854, 380.51627)
 shape = SubResource("SegmentShape2D_slyq0")
 metadata/_edit_lock_ = true
 
+[node name="RoomCards" type="Node2D" parent="." unique_id=1181347688]
+scale = Vector2(0.5, 0.5)
+
+[node name="Wheelchair" parent="RoomCards" unique_id=785310779 instance=ExtResource("3_qtc5n")]
+position = Vector2(2106, 234)
+card_data = ExtResource("4_23q4v")
+in_deck = false
+is_reversible = false
+
+[node name="Parenteral_Nutrition_Bags" parent="RoomCards" unique_id=793393955 instance=ExtResource("3_qtc5n")]
+position = Vector2(2280, 956)
+card_data = ExtResource("5_s421v")
+in_deck = false
+is_reversible = false
+
+[node name="Pills" parent="RoomCards" unique_id=405495975 instance=ExtResource("3_qtc5n")]
+position = Vector2(2280, 640)
+card_data = ExtResource("6_aqpwq")
+in_deck = false
+is_reversible = false
+
+[node name="First_Aid_Kit" parent="RoomCards" unique_id=4160009 instance=ExtResource("3_qtc5n")]
+position = Vector2(1202, 284)
+card_data = ExtResource("7_y61op")
+in_deck = false
+is_reversible = false
+
+[node name="Pulse_Oximeter" parent="RoomCards" unique_id=1587761322 instance=ExtResource("3_qtc5n")]
+position = Vector2(492, 932)
+card_data = ExtResource("8_q282n")
+in_deck = false
+is_reversible = false
+
+[node name="Syringe" parent="RoomCards" unique_id=956163592 instance=ExtResource("3_qtc5n")]
+position = Vector2(1670, 260)
+card_data = ExtResource("9_lmdjc")
+in_deck = false
+is_reversible = false
+
+[node name="Thermometer" parent="RoomCards" unique_id=543014544 instance=ExtResource("3_qtc5n")]
+position = Vector2(464, 366)
+card_data = ExtResource("10_a2iow")
+in_deck = false
+is_reversible = false
+
+[node name="Heart_Monitor" parent="RoomCards" unique_id=1868602770 instance=ExtResource("3_qtc5n")]
+position = Vector2(1052, 932)
+card_data = ExtResource("11_ql2b8")
+in_deck = false
+is_reversible = false
+
+[node name="Stethoscope" parent="RoomCards" unique_id=1303776531 instance=ExtResource("3_qtc5n")]
+position = Vector2(178, 866)
+card_data = ExtResource("12_ff61y")
+in_deck = false
+is_reversible = false
+
+[node name="Analog_Blood_Pressure_Monitor" parent="RoomCards" unique_id=955187556 instance=ExtResource("3_qtc5n")]
+position = Vector2(1354, 932)
+card_data = ExtResource("13_ip5rr")
+in_deck = false
+is_reversible = false
+
+[node name="Scalpel" parent="RoomCards" unique_id=265450907 instance=ExtResource("3_qtc5n")]
+position = Vector2(1736, 932)
+card_data = ExtResource("14_e855l")
+in_deck = false
+is_reversible = false
+
+[node name="Medical_Ventilator" parent="RoomCards" unique_id=2048496562 instance=ExtResource("3_qtc5n")]
+position = Vector2(802, 932)
+card_data = ExtResource("15_jrcev")
+in_deck = false
+is_reversible = false
+
 [node name="Player" parent="." unique_id=1446733105 instance=ExtResource("2_hs2ul")]
-position = Vector2(601, 182)
+position = Vector2(601, 236)
 scale = Vector2(0.5, 0.5)
 speed = 200.0
