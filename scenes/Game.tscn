@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b1osttivh25l5"]
 
-[ext_resource type="Script" path="res://scripts/main.gd" id="1_45i86"]
+[ext_resource type="Script" uid="uid://c7g3ufiqsp2uf" path="res://scripts/main.gd" id="1_45i86"]
 [ext_resource type="PackedScene" uid="uid://ms6j827p8ja2" path="res://scenes/PlayingCard.tscn" id="2_sv1m6"]
 [ext_resource type="Script" uid="uid://c3cfk6nc7vnpj" path="res://scripts/playing_card_data.gd" id="3_a8wo8"]
 [ext_resource type="Resource" uid="uid://bknm0e2p6j3tt" path="res://card_types/Analog_Blood_Pressure_Monitor.tres" id="4_attvq"]

@@ -1,5 +1,9 @@
 extends Node2D
 
+@export var stamina := 10
+@export var lives := 3
+@export var score := 0
+
 @export var card_scene: PackedScene
 @export var all_card_data: Array[CardData]
 
@@ -25,6 +29,18 @@ func shuffle_and_deal():
 	deal_grid(grid_cards)
 	deal_pile(pile_cards)
 
+func deduct_stamina(amt):
+	if stamina - amt > 0:
+		stamina -= amt
+	else:
+		lose_a_life()
+
+func lose_a_life():
+	if lives - 1 > 0:
+		lives -= 1
+		stamina = 10
+	else:
+		pass # Game over, add gameover func later 
 
 func deal_grid(cards):
 	var rows = 3
@@ -59,6 +75,5 @@ func deal_pile(cards):
 		
 		card.set_face_down()
 
-
-func _on_shuffle_pressed() -> void:
+func _on_shuffle_pressed() -> void:	
 	shuffle_and_deal()
