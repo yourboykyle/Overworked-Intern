@@ -10,7 +10,7 @@ height = 62.0
 [node name="Player" type="CharacterBody2D" unique_id=547967322]
 script = ExtResource("1_v6fml")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=111662921]
+[node name="PlayerSprite" type="Sprite2D" parent="." unique_id=111662921]
 texture = ExtResource("2_3li8b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=141298563]

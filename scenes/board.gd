@@ -12,5 +12,5 @@ func _on_player_entered_room(room_id: String):
 	print(player_current_room)
 
 func _on_player_left_room():
-	player_current_room = "Hallway"
+	player_current_room = "hallway"
 	print(player_current_room)

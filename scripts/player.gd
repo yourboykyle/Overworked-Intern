@@ -4,5 +4,11 @@ extends CharacterBody2D
 
 func _physics_process(_delta):
 	var dir := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	
+	if dir.x < 0: 
+		$PlayerSprite.flip_h = true
+	elif dir.x > 0:
+		$PlayerSprite.flip_h = false
+		
 	velocity = dir * speed
 	move_and_slide()
