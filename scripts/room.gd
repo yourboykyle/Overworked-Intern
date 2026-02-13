@@ -6,6 +6,7 @@ var is_complete: bool
 var player_inside: bool
 
 signal player_entered(room_id : String)
+signal player_left()
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
@@ -15,3 +16,4 @@ func _on_body_entered(body: Node2D) -> void:
 func _on_body_exited(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		player_inside = false
+		player_left.emit()
