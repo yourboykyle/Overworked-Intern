@@ -30,10 +30,10 @@ all_card_data = Array[ExtResource("3_a8wo8")]([ExtResource("4_attvq"), ExtResour
 [node name="UIElements" type="Node2D" parent="." unique_id=102820595]
 
 [node name="DiscardPileLabel" type="Label" parent="UIElements" unique_id=1794295216]
-offset_left = 346.0
-offset_top = 861.0
-offset_right = 568.0
-offset_bottom = 938.0
+offset_left = 37.73585
+offset_top = 63.087254
+offset_right = 259.73584
+offset_bottom = 140.08725
 theme_override_font_sizes/font_size = 32
 text = "Deck"
 horizontal_alignment = 1
@@ -48,14 +48,14 @@ theme_override_font_sizes/font_size = 32
 text = "Start Game"
 
 [node name="GridContainer" type="Node2D" parent="." unique_id=705967233]
-position = Vector2(658, 1011)
+position = Vector2(987.87067, 1014.7651)
 
 [node name="Board" parent="." unique_id=443230231 instance=ExtResource("20_sv1m6")]
 position = Vector2(598, 0)
 scale = Vector2(1.5, 1.5)
 
 [node name="DrawPile" type="Node2D" parent="." unique_id=1597279471]
-position = Vector2(448, 1011)
+position = Vector2(148.24799, 194.63092)
 
 [node name="DeckCards" type="Node2D" parent="." unique_id=1514930145]
 visible = false

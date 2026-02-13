@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bu5gnhdtrw7pa" path="res://assets/character_roundRed.png" id="2_3li8b"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mdl7e"]
-radius = 19.0
-height = 62.0
+radius = 18.0
+height = 56.0
 
 [node name="Player" type="CharacterBody2D" unique_id=547967322]
 script = ExtResource("1_v6fml")
