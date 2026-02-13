@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://clgan6pwr4i3h"]
 
 [ext_resource type="Texture2D" uid="uid://dfr6mie3838o0" path="res://assets/COMP1501_A4_Map_v6.png" id="1_qails"]
+[ext_resource type="Script" uid="uid://csd07o8onrhaj" path="res://scenes/board.gd" id="1_s421v"]
 [ext_resource type="PackedScene" uid="uid://bjhtqskrgoqxp" path="res://scenes/Room.tscn" id="2_23q4v"]
 [ext_resource type="PackedScene" uid="uid://dj4ilwh0cqxrg" path="res://scenes/Player.tscn" id="2_hs2ul"]
 [ext_resource type="PackedScene" uid="uid://ms6j827p8ja2" path="res://scenes/PlayingCard.tscn" id="3_qtc5n"]
@@ -113,6 +114,19 @@ b = Vector2(-0.51342773, 140.46634)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_slyq0"]
 b = Vector2(139.11462, 0.48373413)
 
+[sub_resource type="GDScript" id="GDScript_aqpwq"]
+script/source = "extends Node2D
+
+var player_current_room : String
+
+
+
+
+
+func _on_nurse_station_player_entered() -> void:
+	pass # Replace with function body.
+"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s421v"]
 size = Vector2(4276.9233, 4584.615)
 
@@ -135,6 +149,7 @@ size = Vector2(137, 177)
 size = Vector2(4553.8403, 3046.1538)
 
 [node name="Board" type="Node2D" unique_id=443230231]
+script = ExtResource("1_s421v")
 
 [node name="MapSprite" type="Sprite2D" parent="." unique_id=1078078419]
 texture = ExtResource("1_qails")
@@ -306,8 +321,10 @@ metadata/_edit_lock_ = true
 [node name="Rooms" type="Node2D" parent="." unique_id=370436124]
 position = Vector2(601, 142)
 scale = Vector2(0.065, 0.065)
+script = SubResource("GDScript_aqpwq")
 
 [node name="NurseStation" parent="Rooms" unique_id=1435749458 instance=ExtResource("2_23q4v")]
+room_id = "nurse_station"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/NurseStation" unique_id=1248203187]
 position = Vector2(0, 138.46143)
@@ -316,6 +333,7 @@ shape = SubResource("RectangleShape2D_s421v")
 [node name="Reception" parent="Rooms" unique_id=493966851 instance=ExtResource("2_23q4v")]
 position = Vector2(-3692.3076, 630.76935)
 scale = Vector2(15.384616, 15.384616)
+room_id = "reception"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Reception" unique_id=1963326727]
 position = Vector2(-130, -31.5)
@@ -323,6 +341,7 @@ shape = SubResource("RectangleShape2D_aqpwq")
 
 [node name="ConsultationRoom" parent="Rooms" unique_id=2024869108 instance=ExtResource("2_23q4v")]
 position = Vector2(-7894.6875, 5287.462)
+room_id = "consultation"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/ConsultationRoom" unique_id=348380774]
 position = Vector2(40.840942, -533.61523)
@@ -330,6 +349,7 @@ shape = SubResource("RectangleShape2D_y61op")
 
 [node name="ER1" parent="Rooms" unique_id=312054740 instance=ExtResource("2_23q4v")]
 position = Vector2(-4659.2563, 4047.369)
+room_id = "er1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/ER1" unique_id=1285803240]
 position = Vector2(-740.7444, 1321.8618)
@@ -337,7 +357,7 @@ shape = SubResource("RectangleShape2D_q282n")
 
 [node name="ER2" parent="Rooms" unique_id=1792561985 instance=ExtResource("2_23q4v")]
 position = Vector2(-4659.2563, 4047.369)
-room_id = "t"
+room_id = "er2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/ER2" unique_id=715965372]
 position = Vector2(1428.4868, 1321.8618)
@@ -345,7 +365,7 @@ shape = SubResource("RectangleShape2D_q282n")
 
 [node name="ER3" parent="Rooms" unique_id=1287920005 instance=ExtResource("2_23q4v")]
 position = Vector2(-4659.2563, 4047.369)
-room_id = "t"
+room_id = "er3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/ER3" unique_id=154545770]
 position = Vector2(3582.333, 1321.8618)
@@ -353,7 +373,7 @@ shape = SubResource("RectangleShape2D_q282n")
 
 [node name="ER4" parent="Rooms" unique_id=710905143 instance=ExtResource("2_23q4v")]
 position = Vector2(-4659.2563, 4047.369)
-room_id = "t"
+room_id = "er4"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/ER4" unique_id=73972897]
 position = Vector2(5720.795, 1321.8618)
@@ -361,6 +381,7 @@ shape = SubResource("RectangleShape2D_q282n")
 
 [node name="OperationRoom" parent="Rooms" unique_id=526608582 instance=ExtResource("2_23q4v")]
 position = Vector2(2525.9805, 4249.7627)
+room_id = "op_room"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/OperationRoom" unique_id=544432945]
 position = Vector2(1481.7109, 1119.4683)
@@ -368,6 +389,7 @@ shape = SubResource("RectangleShape2D_lmdjc")
 
 [node name="Storage" parent="Rooms" unique_id=1321402427 instance=ExtResource("2_23q4v")]
 position = Vector2(7015.3843, 6230.7695)
+room_id = "storage"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rooms/Storage" unique_id=244391206]
 polygon = PackedVector2Array(-246.1543, -707.6924, 61.538086, -707.6924, 76.92285, -2569.231, 2200, -2553.8462, 2215.3848, 830.76953, -1169.2305, 830.76953, -1169.2305, -707.6924)
@@ -375,21 +397,24 @@ polygon = PackedVector2Array(-246.1543, -707.6924, 61.538086, -707.6924, 76.9228
 [node name="Bathroom" parent="Rooms" unique_id=1831505061 instance=ExtResource("2_23q4v")]
 position = Vector2(7997.3906, 2022.6365)
 scale = Vector2(15.384616, 15.384616)
+room_id = "bathroom"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Bathroom" unique_id=278344961]
 position = Vector2(10.669678, 17.028625)
 shape = SubResource("RectangleShape2D_a2iow")
 
 [node name="XRay" parent="Rooms" unique_id=1876068612 instance=ExtResource("2_23q4v")]
+room_id = "xray"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/XRay" unique_id=1642991858]
 position = Vector2(6923.075, -630.7694)
 shape = SubResource("RectangleShape2D_ql2b8")
 
-[node name="Room" parent="Rooms" unique_id=1296818889 instance=ExtResource("2_23q4v")]
+[node name="Lab" parent="Rooms" unique_id=1296818889 instance=ExtResource("2_23q4v")]
 position = Vector2(3246.1533, -953.8462)
+room_id = "lab"
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rooms/Room" unique_id=2032249420]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rooms/Lab" unique_id=2032249420]
 polygon = PackedVector2Array(-1092.3076, -1200, 1369.2314, -1200, 1369.2314, 1861.5386, 2600.001, 1861.5386, 2584.6162, 3400.0002, -1076.9229, 3384.6155)
 
 [node name="RoomCards" type="Node2D" parent="." unique_id=1181347688]

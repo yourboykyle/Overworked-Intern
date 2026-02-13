@@ -5,12 +5,12 @@ extends Area2D
 var is_complete: bool
 var player_inside: bool
 
-signal player_entered
+signal player_entered(room_id : String)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		player_inside = true
-		emit_signal("player_entered", room_id)
+		player_entered.emit(room_id)
 
 func _on_body_exited(body: Node2D) -> void:
 	if body is CharacterBody2D:
