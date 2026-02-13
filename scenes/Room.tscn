@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bjhtqskrgoqxp"]
+
+[ext_resource type="Script" uid="uid://s77p3lubdh1" path="res://scripts/rooms.gd" id="1_llheb"]
+
+[node name="Room" type="Area2D" unique_id=1435749458]
+script = ExtResource("1_llheb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
