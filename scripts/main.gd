@@ -13,6 +13,19 @@ extends Node2D
 func _ready():
 	shuffle_and_deal()
 
+func deduct_stamina(amt):
+	if stamina - amt > 0:
+		stamina -= amt
+	else:
+		lose_a_life()
+
+func lose_a_life():
+	if lives - 1 > 0:
+		lives -= 1
+		stamina = 10
+	else:
+		pass # Game over, add gameover func later 
+
 func shuffle_and_deal():
 	for child in grid.get_children():
 		child.queue_free()
@@ -28,19 +41,6 @@ func shuffle_and_deal():
 
 	deal_grid(grid_cards)
 	deal_pile(pile_cards)
-
-func deduct_stamina(amt):
-	if stamina - amt > 0:
-		stamina -= amt
-	else:
-		lose_a_life()
-
-func lose_a_life():
-	if lives - 1 > 0:
-		lives -= 1
-		stamina = 10
-	else:
-		pass # Game over, add gameover func later 
 
 func deal_grid(cards):
 	var rows = 3
@@ -77,3 +77,8 @@ func deal_pile(cards):
 
 func _on_shuffle_pressed() -> void:	
 	shuffle_and_deal()
+
+
+
+func _on_board_player_room_changed(room: String) -> void:
+	$UIElements/CurrentRoomLabel.text = room

@@ -47,6 +47,12 @@ offset_bottom = 111.0
 theme_override_font_sizes/font_size = 32
 text = "Start Game"
 
+[node name="CurrentRoomLabel" type="Label" parent="UIElements" unique_id=1424056479]
+offset_left = 148.24799
+offset_top = 736.9127
+offset_right = 370.61996
+offset_bottom = 857.7181
+
 [node name="GridContainer" type="Node2D" parent="." unique_id=705967233]
 position = Vector2(987.87067, 1014.7651)
 
@@ -221,3 +227,4 @@ scale = Vector2(0.07, 0.07)
 card_data = ExtResource("16_naigu")
 
 [connection signal="pressed" from="UIElements/StartGameButton" to="." method="_on_shuffle_pressed"]
+[connection signal="player_room_changed" from="Board" to="." method="_on_board_player_room_changed"]
