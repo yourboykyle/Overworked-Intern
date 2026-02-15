@@ -29,13 +29,32 @@ all_card_data = Array[ExtResource("3_a8wo8")]([ExtResource("4_attvq"), ExtResour
 
 [node name="UIElements" type="Node2D" parent="." unique_id=102820595]
 
-[node name="DiscardPileLabel" type="Label" parent="UIElements" unique_id=1794295216]
-offset_left = 37.73585
-offset_top = 63.087254
-offset_right = 259.73584
-offset_bottom = 140.08725
+[node name="DrawPileLabel" type="Label" parent="UIElements" unique_id=1794295216]
+offset_left = 37.735847
+offset_top = 45.637585
+offset_right = 259.7358
+offset_bottom = 122.63759
 theme_override_font_sizes/font_size = 32
 text = "Deck"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DrawPileCount" type="Label" parent="UIElements" unique_id=1727641539]
+offset_left = 191.37466
+offset_top = 46.979866
+offset_right = 270.51752
+offset_bottom = 123.979866
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MatchedPileLabel" type="Label" parent="UIElements" unique_id=582721931]
+offset_left = 37.73585
+offset_top = 373.15433
+offset_right = 259.73584
+offset_bottom = 450.1542
+theme_override_font_sizes/font_size = 32
+text = "Matched"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -63,6 +82,9 @@ scale = Vector2(1.5, 1.5)
 [node name="DrawPile" type="Node2D" parent="." unique_id=1597279471]
 position = Vector2(148.24799, 194.63092)
 
+[node name="MatchedPile" type="Node2D" parent="." unique_id=67711364]
+position = Vector2(148.248, 500)
+
 [node name="DeckCards" type="Node2D" parent="." unique_id=1514930145]
 visible = false
 
@@ -70,161 +92,193 @@ visible = false
 position = Vector2(673, 1051)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("8_a85ww")
+can_flip = null
 
 [node name="Medical_Ventilator2" parent="DeckCards" unique_id=963711276 instance=ExtResource("2_sv1m6")]
 position = Vector2(673, 1051)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("8_a85ww")
+can_flip = null
 
 [node name="Wheelchair" parent="DeckCards" unique_id=161291420 instance=ExtResource("2_sv1m6")]
 position = Vector2(1343, 1063)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("19_7f8l2")
+can_flip = null
 
 [node name="Wheelchair2" parent="DeckCards" unique_id=1046360555 instance=ExtResource("2_sv1m6")]
 position = Vector2(1343, 1063)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("19_7f8l2")
+can_flip = null
 
 [node name="Parenteral_Nutrition_Bags" parent="DeckCards" unique_id=195083557 instance=ExtResource("2_sv1m6")]
 position = Vector2(1690, 1067)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("10_0bq3a")
+can_flip = null
 
 [node name="Parenteral_Nutrition_Bags2" parent="DeckCards" unique_id=1870747173 instance=ExtResource("2_sv1m6")]
 position = Vector2(1690, 1067)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("10_0bq3a")
+can_flip = null
 
 [node name="Pills" parent="DeckCards" unique_id=69860669 instance=ExtResource("2_sv1m6")]
 position = Vector2(1516, 1066)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("11_754j2")
+can_flip = null
 
 [node name="Pills2" parent="DeckCards" unique_id=1994485012 instance=ExtResource("2_sv1m6")]
 position = Vector2(1516, 1066)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("11_754j2")
+can_flip = null
 
 [node name="First_Aid_Kit" parent="DeckCards" unique_id=199082105 instance=ExtResource("2_sv1m6")]
 position = Vector2(1014, 1053)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("6_ocgqw")
+can_flip = null
 
 [node name="First_Aid_Kit2" parent="DeckCards" unique_id=303049617 instance=ExtResource("2_sv1m6")]
 position = Vector2(1014, 1053)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("6_ocgqw")
+can_flip = null
 
 [node name="Pulse_Oximeter" parent="DeckCards" unique_id=709664632 instance=ExtResource("2_sv1m6")]
 position = Vector2(847, 1223)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("12_i4jil")
+can_flip = null
 
 [node name="Pulse_Oximeter2" parent="DeckCards" unique_id=1352564036 instance=ExtResource("2_sv1m6")]
 position = Vector2(847, 1223)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("12_i4jil")
+can_flip = null
 
 [node name="Syringe" parent="DeckCards" unique_id=1912420957 instance=ExtResource("2_sv1m6")]
 position = Vector2(1176, 1059)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("17_m1oc7")
+can_flip = null
 
 [node name="Syringe2" parent="DeckCards" unique_id=2100654418 instance=ExtResource("2_sv1m6")]
 position = Vector2(1176, 1059)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("17_m1oc7")
+can_flip = null
 
 [node name="Thermometer" parent="DeckCards" unique_id=1337909347 instance=ExtResource("2_sv1m6")]
 position = Vector2(839.99994, 1054)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("18_kbe8o")
+can_flip = null
 
 [node name="Thermometer2" parent="DeckCards" unique_id=2014866927 instance=ExtResource("2_sv1m6")]
 position = Vector2(839.99994, 1054)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("18_kbe8o")
+can_flip = null
 
 [node name="Heart_Monitor" parent="DeckCards" unique_id=219542225 instance=ExtResource("2_sv1m6")]
 position = Vector2(665, 1225)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("7_jbgew")
+can_flip = null
 
 [node name="Heart_Monitor2" parent="DeckCards" unique_id=2126091384 instance=ExtResource("2_sv1m6")]
 position = Vector2(665, 1225)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("7_jbgew")
+can_flip = null
 
 [node name="Stethoscope" parent="DeckCards" unique_id=799111730 instance=ExtResource("2_sv1m6")]
 position = Vector2(1024, 1226)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("15_426vi")
+can_flip = null
 
 [node name="Stethoscope2" parent="DeckCards" unique_id=1516171087 instance=ExtResource("2_sv1m6")]
 position = Vector2(1024, 1226)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("15_426vi")
+can_flip = null
 
 [node name="Analog_Blood_Pressure_Monitor" parent="DeckCards" unique_id=1764918846 instance=ExtResource("2_sv1m6")]
 position = Vector2(1197, 1218)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("4_attvq")
+can_flip = null
 
 [node name="Analog_Blood_Pressure_Monitor2" parent="DeckCards" unique_id=335123528 instance=ExtResource("2_sv1m6")]
 position = Vector2(1197, 1218)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("4_attvq")
+can_flip = null
 
 [node name="Electronic_Blood_Pressure_Monitor" parent="DeckCards" unique_id=1033019311 instance=ExtResource("2_sv1m6")]
 position = Vector2(1357, 1225)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("5_bneo8")
+can_flip = null
 
 [node name="Electronic_Blood_Pressure_Monitor2" parent="DeckCards" unique_id=56754018 instance=ExtResource("2_sv1m6")]
 position = Vector2(1357, 1225)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("5_bneo8")
+can_flip = null
 
 [node name="Scalpel" parent="DeckCards" unique_id=1149836362 instance=ExtResource("2_sv1m6")]
 position = Vector2(1862, 1066)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("14_1gdd5")
+can_flip = null
 
 [node name="Scalpel2" parent="DeckCards" unique_id=607968187 instance=ExtResource("2_sv1m6")]
 position = Vector2(1862, 1066)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("14_1gdd5")
+can_flip = null
 
 [node name="Otoscope" parent="DeckCards" unique_id=1166925053 instance=ExtResource("2_sv1m6")]
 position = Vector2(1518, 1227)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("9_jhsr3")
+can_flip = null
 
 [node name="Otoscope2" parent="DeckCards" unique_id=1666393140 instance=ExtResource("2_sv1m6")]
 position = Vector2(1518, 1227)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("9_jhsr3")
+can_flip = null
 
 [node name="Reflex_Hammer" parent="DeckCards" unique_id=102411366 instance=ExtResource("2_sv1m6")]
 position = Vector2(1688, 1227)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("13_jai3c")
+can_flip = null
 
 [node name="Reflex_Hammer2" parent="DeckCards" unique_id=708631564 instance=ExtResource("2_sv1m6")]
 position = Vector2(1688, 1227)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("13_jai3c")
+can_flip = null
 
 [node name="Surgical_Rake_Retractor" parent="DeckCards" unique_id=261269465 instance=ExtResource("2_sv1m6")]
 position = Vector2(1862, 1227)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("16_naigu")
+can_flip = null
 
 [node name="Surgical_Rake_Retractor2" parent="DeckCards" unique_id=2079324557 instance=ExtResource("2_sv1m6")]
 position = Vector2(1862, 1227)
 scale = Vector2(0.07, 0.07)
 card_data = ExtResource("16_naigu")
+can_flip = null
 
 [connection signal="pressed" from="UIElements/StartGameButton" to="." method="_on_shuffle_pressed"]
 [connection signal="player_room_changed" from="Board" to="." method="_on_board_player_room_changed"]
