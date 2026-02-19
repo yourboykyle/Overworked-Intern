@@ -19,6 +19,7 @@ func _ready():
 	apply_card_data()
 	update_visual()
 
+
 func apply_card_data():
 	if card_data:
 		front.texture = card_data.front_texture
