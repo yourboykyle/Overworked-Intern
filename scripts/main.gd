@@ -29,7 +29,7 @@ func deduct_stamina(amt):
 		lose_a_life()
 
 func lose_a_life():
-	if lives - 3 > 0:
+	if lives - 1 > 0:
 		lives -= 1
 		stamina = 10
 	else:
