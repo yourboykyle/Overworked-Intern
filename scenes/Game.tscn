@@ -21,6 +21,7 @@
 [ext_resource type="Resource" uid="uid://dqkkyu2u3nu5l" path="res://card_types/Wheelchair.tres" id="19_7f8l2"]
 [ext_resource type="PackedScene" uid="uid://clgan6pwr4i3h" path="res://scenes/Board.tscn" id="20_sv1m6"]
 [ext_resource type="Texture2D" uid="uid://2rc4na1yv4xq" path="res://card_images/Inventory_Slot.png" id="21_a8wo8"]
+[ext_resource type="Texture2D" uid="uid://ctbd28cujik6d" path="res://card_images/FailureGame.png" id="22_attvq"]
 
 [node name="Main" type="Node2D" unique_id=942970590]
 scale = Vector2(0.742, 0.745)
@@ -278,6 +279,15 @@ expand_mode = 1
 custom_minimum_size = Vector2(140, 140)
 layout_mode = 2
 texture = ExtResource("21_a8wo8")
+expand_mode = 1
+
+[node name="EndScreen" type="CanvasLayer" parent="." unique_id=1126113907]
+
+[node name="FailureGame" type="TextureRect" parent="EndScreen" unique_id=1053871424]
+offset_left = 4.0
+offset_right = 1796.0
+offset_bottom = 749.0
+texture = ExtResource("22_attvq")
 expand_mode = 1
 
 [connection signal="pressed" from="UIElements/StartGameButton" to="." method="_on_shuffle_pressed"]

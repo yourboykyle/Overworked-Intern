@@ -10,6 +10,8 @@ extends Node2D
 @onready var grid = $GridContainer
 @onready var draw_pile = $DrawPile
 @onready var draw_pile_label = $UIElements/DrawPileCount
+@onready var failure_game = $EndScreen/FailureGame
+
 var flipped_cards: Array = []
 var checking_match := false
 
@@ -17,6 +19,7 @@ var checking_match := false
 @onready var slots = $InventoryUI/Slots
 
 func _ready():
+	failure_game.visible = false
 	shuffle_and_deal()
 		
 func deduct_stamina(amt):
@@ -26,11 +29,12 @@ func deduct_stamina(amt):
 		lose_a_life()
 
 func lose_a_life():
-	if lives - 1 > 0:
+	if lives - 3 > 0:
 		lives -= 1
 		stamina = 10
 	else:
-		pass # Game over, add gameover func later 
+		failure_game.visible = true
+		 # Game over, add gameover func later 
 	print("Number of lives")
 	print(lives)
 	print("Stamina")
