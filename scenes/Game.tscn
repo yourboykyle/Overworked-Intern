@@ -323,10 +323,10 @@ expand_mode = 1
 [node name="EndScreen" type="CanvasLayer" parent="." unique_id=1126113907]
 
 [node name="FailureGame" type="TextureRect" parent="EndScreen" unique_id=1053871424]
-offset_left = 1271.0
-offset_top = 374.0
-offset_right = 3063.0
-offset_bottom = 1123.0
+offset_left = 9.0
+offset_top = -6.0
+offset_right = 1801.0
+offset_bottom = 743.0
 texture = ExtResource("22_attvq")
 expand_mode = 1
 
