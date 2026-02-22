@@ -1,5 +1,6 @@
 extends Node2D
 
+
 @export var stamina := 10
 @export var lives := 3
 @export var score := 0
@@ -11,6 +12,8 @@ extends Node2D
 @onready var draw_pile = $DrawPile
 @onready var draw_pile_label = $UIElements/DrawPileCount
 @onready var failure_game = $EndScreen/FailureGame
+@onready var StartGame = $StartGame
+@onready var anim = $IntroAnimation
 
 var flipped_cards: Array = []
 var checking_match := false
@@ -19,6 +22,8 @@ var checking_match := false
 @onready var slots = $InventoryUI/Slots
 
 func _ready():
+	anim.play("StartGame")
+	StartGame.play()
 	failure_game.visible = false
 	shuffle_and_deal()
 		

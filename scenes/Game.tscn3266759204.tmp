@@ -42,7 +42,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_bneo8"]
 resource_name = "StartGame"
-length = 6.766667
+length = 1.7333333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -50,10 +50,10 @@ tracks/0/path = NodePath("Sprite2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 1.7, 6.766667),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(1141.5095, 251.0067), Vector2(478.43665, 310.0671), Vector2(478.43665, 310.0671)]
+"values": [Vector2(0, 0), Vector2(1141.5095, 251.0067), Vector2(478.43665, 310.0671)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ocgqw"]
@@ -323,10 +323,10 @@ expand_mode = 1
 [node name="EndScreen" type="CanvasLayer" parent="." unique_id=1126113907]
 
 [node name="FailureGame" type="TextureRect" parent="EndScreen" unique_id=1053871424]
-offset_left = 1271.0
-offset_top = 374.0
-offset_right = 3063.0
-offset_bottom = 1123.0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 1789.0
+offset_bottom = 746.0
 texture = ExtResource("22_attvq")
 expand_mode = 1
 
