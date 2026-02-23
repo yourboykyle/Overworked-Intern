@@ -165,7 +165,7 @@ func find_item_in_inventory(item_name: String) -> Node:
 	return null
 
 func _on_board_player_room_changed(room: String) -> void:
-	$UIElements/CurrentRoomLabel.text = room
+	$GameUI/CurrentRoomLabel.text = "Current Room: " + room
 
 func _on_card_flipped(card):
 	update_stamina(-1)

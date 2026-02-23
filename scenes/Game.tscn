@@ -115,12 +115,6 @@ offset_bottom = 194.0
 theme_override_font_sizes/font_size = 32
 text = "Use Item"
 
-[node name="CurrentRoomLabel" type="Label" parent="UIElements" unique_id=1424056479]
-offset_left = 148.24799
-offset_top = 736.9127
-offset_right = 370.61996
-offset_bottom = 857.7181
-
 [node name="GridContainer" type="Node2D" parent="." unique_id=705967233]
 position = Vector2(600, 600)
 
@@ -353,6 +347,29 @@ offset_right = 322.0
 offset_bottom = 536.0
 theme_override_font_sizes/font_size = 32
 text = "Lives: 3"
+
+[node name="CurrentRoomLabel" type="Label" parent="GameUI" unique_id=1424056479]
+offset_left = 34.0
+offset_top = 553.0
+offset_right = 324.0
+offset_bottom = 598.0
+theme_override_font_sizes/font_size = 20
+text = "Current Room: "
+
+[node name="MoveInstruc" type="Label" parent="GameUI" unique_id=1613955369]
+offset_left = 1227.0
+offset_top = 34.0
+offset_right = 1470.0
+offset_bottom = 70.0
+text = "Move with WASD or Arrow Keys"
+
+[node name="GameInstruc" type="Label" parent="GameUI" unique_id=320421777]
+offset_left = 1226.0
+offset_top = 78.0
+offset_right = 1546.0
+offset_bottom = 127.0
+text = "Match items and use them in their 
+rooms to gain points"
 
 [node name="EndScreen" type="CanvasLayer" parent="." unique_id=1126113907]
 visible = false
