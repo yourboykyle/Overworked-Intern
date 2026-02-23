@@ -68,6 +68,14 @@ offset_bottom = 111.0
 theme_override_font_sizes/font_size = 32
 text = "Start Game"
 
+[node name="UseItemButton" type="Button" parent="UIElements" unique_id=100000001]
+offset_left = 340.0
+offset_top = 130.0
+offset_right = 554.0
+offset_bottom = 194.0
+theme_override_font_sizes/font_size = 32
+text = "Use Item"
+
 [node name="CurrentRoomLabel" type="Label" parent="UIElements" unique_id=1424056479]
 offset_left = 148.24799
 offset_top = 736.9127
@@ -281,7 +289,34 @@ layout_mode = 2
 texture = ExtResource("21_a8wo8")
 expand_mode = 1
 
+[node name="GameUI" type="CanvasLayer" parent="." unique_id=100000005]
+
+[node name="ScoreLabel" type="Label" parent="GameUI" unique_id=100000002]
+offset_left = 33.0
+offset_top = 404.0
+offset_right = 323.0
+offset_bottom = 449.0
+theme_override_font_sizes/font_size = 32
+text = "Score: 0"
+
+[node name="StaminaLabel" type="Label" parent="GameUI" unique_id=100000003]
+offset_left = 34.0
+offset_top = 446.0
+offset_right = 324.0
+offset_bottom = 491.0
+theme_override_font_sizes/font_size = 32
+text = "Stamina: 10"
+
+[node name="LivesLabel" type="Label" parent="GameUI" unique_id=100000004]
+offset_left = 32.0
+offset_top = 491.0
+offset_right = 322.0
+offset_bottom = 536.0
+theme_override_font_sizes/font_size = 32
+text = "Lives: 3"
+
 [node name="EndScreen" type="CanvasLayer" parent="." unique_id=1126113907]
+visible = false
 
 [node name="FailureGame" type="TextureRect" parent="EndScreen" unique_id=1053871424]
 offset_left = 4.0
@@ -291,4 +326,5 @@ texture = ExtResource("22_attvq")
 expand_mode = 1
 
 [connection signal="pressed" from="UIElements/StartGameButton" to="." method="_on_shuffle_pressed"]
+[connection signal="pressed" from="UIElements/UseItemButton" to="." method="_on_use_item_pressed"]
 [connection signal="player_room_changed" from="Board" to="." method="_on_board_player_room_changed"]
