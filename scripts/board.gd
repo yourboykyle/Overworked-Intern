@@ -4,6 +4,12 @@ extends Node2D
 
 signal player_room_changed(room: String)
 
+func get_current_room() -> Node:
+	for room in $Rooms.get_children():
+		if room.room_id == player_current_room:
+			return room
+	return null
+
 func _ready():
 	for room in $Rooms.get_children():
 		room.player_entered.connect(_on_player_entered_room)

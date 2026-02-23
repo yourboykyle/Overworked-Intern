@@ -8,9 +8,13 @@ extends Node2D
 @export var card_scene: PackedScene
 @export var all_card_data: Array[CardData]
 
+@onready var board = $Board
 @onready var grid = $GridContainer
 @onready var draw_pile = $DrawPile
 @onready var draw_pile_label = $UIElements/DrawPileCount
+@onready var score_label = $GameUI/ScoreLabel
+@onready var stamina_label = $GameUI/StaminaLabel
+@onready var lives_label = $GameUI/LivesLabel
 @onready var failure_game = $EndScreen/FailureGame
 @onready var StartGame = $StartGame
 @onready var anim = $IntroAnimation
@@ -26,6 +30,8 @@ func _ready():
 	StartGame.play()
 	failure_game.visible = false
 	shuffle_and_deal()
+	update_stamina_label()
+	update_lives_label()
 		
 func deduct_stamina(amt):
 	if stamina - amt > 0:
@@ -39,7 +45,9 @@ func lose_a_life():
 		stamina = 10
 	else:
 		failure_game.visible = true
-		 # Game over, add gameover func later 
+		# Game over, add gameover func later 
+	update_lives_label()
+	update_stamina_label()
 	print("Number of lives")
 	print(lives)
 	print("Stamina")
@@ -116,9 +124,45 @@ func deal_pile(cards):
 	update_draw_pile_label()
 
 func _on_shuffle_pressed() -> void:	
+	score = 0
+	stamina = 10
+	lives = 3
+	update_score_label()
+	update_stamina_label()
+	update_lives_label()
 	shuffle_and_deal()
 
+func _on_use_item_pressed() -> void:
+	try_use_item()
 
+func try_use_item():
+	var room = board.get_current_room()
+	if room == null or room.required_item == "" or room.is_complete:
+		return
+	var card = find_item_in_inventory(room.required_item)
+	if card == null:
+		return
+	card.queue_free()
+	room.complete_room()
+	score += 1
+	update_score_label()
+
+func update_score_label():
+	score_label.text = "Score: " + str(score)
+
+func update_stamina_label():
+	stamina_label.text = "Stamina: " + str(stamina)
+
+func update_lives_label():
+	lives_label.text = "Lives: " + str(lives)
+
+func find_item_in_inventory(item_name: String) -> Node:
+	for slot in slots.get_children():
+		if slot.get_child_count() > 0:
+			var card = slot.get_child(0)
+			if card.card_data and card.card_data.card_name == item_name:
+				return card
+	return null
 
 func _on_board_player_room_changed(room: String) -> void:
 	$UIElements/CurrentRoomLabel.text = room
@@ -147,7 +191,7 @@ func update_stamina(value):
 	if stamina == 0:
 		lose_a_life()
 		stamina = 10
-	
+	update_stamina_label()
 func check_match():
 	var card1 = flipped_cards[0]
 	var card2 = flipped_cards[1]
@@ -183,13 +227,13 @@ func move_to_inventory(card1,card2):
 	var next_slot = next_slot();
 	card1[0].get_parent().remove_child(card1[0])
 	card2[0].get_parent().remove_child(card2[0])
-			
+	
 	next_slot.add_child(card1[0])	
 	card1[0].position = Vector2(68,85)
-			
+	
 	draw_card_from_pile(card1[1])
 	draw_card_from_pile(card2[1])
-			
+	
 	card2[0].queue_free()
 	
 	#card.new_parent(slot).add_child(card)
